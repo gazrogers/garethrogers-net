@@ -1,0 +1,106 @@
+:root {
+    --background-color: #f4f7fa;
+    --primary-colour: #002c72;
+    --secondary-colour: #ff0002;
+    --base-nav-icon-size: 24px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-columns: calc(var(--base-nav-icon-size) * 4) auto;
+    grid-template-rows: calc(var(--base-nav-icon-size) * 4) auto;
+    grid-template-areas:
+        "nav header"
+        "nav main";
+    background-color: var(--primary-colour);
+
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: normal;
+}
+nav {
+    grid-area: nav;
+    z-index: 2;
+}
+nav ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: calc(var(--base-nav-icon-size) * 4.5) calc(var(--base-nav-icon-size) * .5) 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+nav li {
+    width: calc(var(--base-nav-icon-size) * 1);
+    padding: calc(var(--base-nav-icon-size) * 1);
+    margin: calc(var(--base-nav-icon-size) * 1.5) 0;
+    border-radius: calc(var(--base-nav-icon-size) * 1);
+    transition: background-color .1s linear, margin .1s ease-out, box-shadow .1s ease-out;
+}
+nav li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--primary-colour);
+}
+nav li:active, nav li:focus {
+    background-color: white;
+    color: var(--primary-colour);
+    outline: none;
+}
+nav li:active:not(:last-child), nav li:focus {
+    margin-left: calc(var(--base-nav-icon-size) * 2);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+nav svg {
+    display: block;
+    width: calc(var(--base-nav-icon-size) * 1);
+    color: white;
+    transition: color .1s linear;
+}
+nav li:active svg, nav li:focus svg {
+    color: var(--primary-colour);
+}
+nav li span {
+    opacity: 0;
+    color: var(--primary-colour);
+    background-color: white;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    transition: opacity .1s linear 0s;
+    position: absolute;
+    font-size: .8em;
+    left: 90%;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+nav li:hover span {
+    opacity: 1;
+    /*transition: opacity .1s linear 1s;*/
+}
+nav li:hover:active span, nav li:hover:focus span {
+    opacity: 0;
+}
+nav li:last-child {
+    position: absolute;
+    bottom: 0;
+}
+header {
+    grid-area: header;
+    z-index: 1;
+    background-color: var(--background-color);
+    border-radius: 36px 0 0 0;
+    padding: var(--base-nav-icon-size) calc(var(--base-nav-icon-size) * 2);
+}
+h1 {
+    font-weight: 100;
+}
+main {
+    grid-area: main;
+    z-index: 1;
+    background-color: var(--background-color);
+    border-radius: 0 0 0 36px;
+}
