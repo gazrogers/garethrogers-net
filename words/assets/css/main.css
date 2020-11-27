@@ -103,8 +103,28 @@ a:hover, a:active {
 footer {
     box-sizing: border-box;
     width: 100%;
-    background-color: var(--header-bg-colour);
+    background: var(--header-bg-colour);
     color: var(--title-text-colour);
+}
+footer ul {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 1rem;
+    line-height: 2.7;
+}
+footer a {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    vertical-align: middle;
+    fill: var(--title-text-colour);
+}
+footer a:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 ul {
     list-style-type: none;
