@@ -25,6 +25,7 @@ body {
     color: var(--main-text-colour);
     height: 100%;
 }
+/* Headings */
 header h1 {
     font-family: var(--title-font);
     font-weight: 800;
@@ -60,10 +61,18 @@ header {
     background: var(--header-bg-colour);
     color: var(--title-text-colour);
 }
+date {
+    font-size: 0.5em;
+    line-height: 3.6;
+    color: var(--main-text-colour);
+    float: right;
+}
+/* Main section */
 main {
     margin: 0 auto;
     padding: 0 1ch;
 }
+/* Code blocks */
 pre {
     background-color: var(--header-bg-colour);
     color: var(--title-text-colour);
@@ -81,21 +90,16 @@ code {
 pre code {
     padding: 0;
 }
+/* Links */
 a {
     background-color: transparent;
-    /*text-decoration: none;*/
     color: var(--main-text-colour);
     transition: background-color 0.25s ease-in-out;
 }
 a:hover, a:active {
     background-color: var(--link-hover-colour);
 }
-date {
-    font-size: 0.5em;
-    line-height: 3.6;
-    color: var(--main-text-colour);
-    float: right;
-}
+
 footer {
     box-sizing: border-box;
     width: 100%;
@@ -107,10 +111,12 @@ ul {
     padding: 0;
     margin: 0;
 }
+/* First line small caps */
 p:first-of-type:first-line:not(.plain) {
     font-family: var(--title-font);
     font-weight: 400;
 }
+/* Article list */
 .article-preview {
     padding-bottom: 5px;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
@@ -119,6 +125,7 @@ p:first-of-type:first-line:not(.plain) {
     box-shadow: none;
 }
 
+/* Variations for various sizes */
 @media (min-width: 536px) {
     body {
         font-size: var(--base-font-size);
