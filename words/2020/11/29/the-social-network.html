@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>New start - Gareth Rogers</title>
+    <title>The Social Network - Gareth Rogers</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
@@ -16,21 +16,59 @@
     <header>
         <h1>Words</h1>
     </header>
-    <main><h2>New start<date>26 Nov 2020</date></h2>
+    <main><h2>The Social Network<date>29 Nov 2020</date></h2>
 
-<article><p>So after working for the same company for nearly 12 years, I’m into the last few days before moving on to something new.</p>
+<article><p>I need a demo project.</p>
 
-<p>It’s been a busy year in terms of learning new stuff, with Docker, Kubernetes, <abbr title="Google Cloud Platform">GCP</abbr>,
-React, and Terraform each being crammed into my brain as I tried to ensure I had the skills for the inevitable job search
-after the company I work for was taken over.</p>
+<p>After 11 years of working for a company and creating a number of internal systems for their use, I still have nothing to show prospective employers as evidence that I actually <em>can</em> do the things I claim I can do in my CV. I’m not a big contributor to open source software, as most of my spare time gets taken up with whatever OU course I’m studying at the time, and so pretty much all of my past work is hidden behind network firewalls.</p>
 
-<p>Anyway, I’ve created this new jotting pad because I suspect I’m not going to get the opportunity to use some of the new
-stuff in my new job. I’ll have to do stuff here instead.</p>
+<p>So let’s create a demo project that is available on Github for anyone to look at. This has the added benefit of giving me practice with some stuff that I don’t get to do as often.</p>
 
-<p>I may even get back to fiddling with Scala again.</p>
+<h3 id="the-requirements">The Requirements</h3>
+
+<p>Ideally, I’d like the project to have some involvement with:</p>
+
+<ul>
+  <li>DevOps, Infrastructure-As-Code</li>
+  <li>Database</li>
+  <li>Full stack development</li>
+  <li>Some or all of PHP, Python, and Scala</li>
+  <li>A Javascript framework like React</li>
+  <li>Can I crowbar native mobile apps in here?</li>
+</ul>
+
+<p>So, not giving myself much to do really.</p>
+
+<h3 id="the-project">The Project</h3>
+
+<p>As the post title suggests, I’ve decided to create a small social network application for this project.<br />
+Obviously, the hardest tasks with building a social network are attracting users and then scaling up if you get traction. Those are not things I’m going to need to worry about. The application will be fully functional, but I can’t see floods of users picking up a demo project as the Next Big Thing™.</p>
+
+<h3 id="the-rough-plan">The Rough Plan</h3>
+
+<p>To get something up relatively quickly, I’ll come up with a kind of minimum viable product and then build from there.</p>
+
+<p>So.<br />
+Let’s call the app ‘Mnmlsm’ (d’ya see what I did there?), and restrict the character count to 50 per post.<br />
+To start with we won’t have ‘friends’ or ‘followers’, and we’ll just have a single feed of posts.<br />
+No replies yet either.</p>
+
+<p>What do we need for this minimal application? Well, we’ll need a database table to hold the posts. And a front-end page or application for users to submit posts, and view the feed. And then there’ll have to be a back-end program/script/application to take the requests to add or view, and do something, and maybe return a response. And we’ll need some kind of infrastructure to host it on.</p>
+
+<p>That’s probably enough to be going on with for now.</p>
+
+<h4 id="next-steps">Next steps</h4>
+
+<ul>
+  <li>Create a development environment so I can run the app locally while it’s being developed</li>
+  <li>Create an API backend to handle the post and view requests</li>
+</ul>
+
 </article>
 
 <ul>
+
+	<li class="tag"><a href="/words/tags/mnmlsm">mnmlsm</a></li>
 
 </ul></main>
     <footer>

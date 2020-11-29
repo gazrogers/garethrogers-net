@@ -2,7 +2,7 @@
     --title-font: 'Alegreya SC', serif;
     --body-font: 'Alegreya', serif;
     --code-font: 'Inconsolata', monospace;
-    --base-font-size: 24px;
+    --base-font-size: 20px;
     --header-bg-colour: linear-gradient(165deg, hsla(197, 37%, 36%, 1), hsla(197, 37%, 12%, 1));
     --main-bg-colour: hsla(173, 58%, 98%, 1);
     --title-text-colour: whitesmoke;
@@ -131,8 +131,31 @@ ul {
     padding: 0;
     margin: 0;
 }
+article ul {
+    list-style-type: disc;
+}
+/* Tags */
+article + ul {
+    margin: 20px 0 10px 0;
+    font-size: 1rem;
+}
+.tag {
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: rgba(128, 128, 128, 0.25);
+}
+.tag:hover {
+    background: #E9C46A;
+}
+.tag a {
+    text-decoration: none;
+}
+.tag a:hover {
+    background: none;
+}
 /* First line small caps */
-p:first-of-type:first-line:not(.plain) {
+p:not(.plain):first-of-type:first-line {
     font-family: var(--title-font);
     font-weight: 400;
 }
@@ -154,8 +177,8 @@ p:first-of-type:first-line:not(.plain) {
         font-size: 5rem;
     }
     main {
-        max-width: 50ch;
-        font-size: 1.5rem;
+        max-width: 60ch;
+        font-size: 1.25rem;
     }
 }
 
