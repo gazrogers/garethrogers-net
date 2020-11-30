@@ -74,21 +74,34 @@ main {
 }
 /* Code blocks */
 pre {
-    background-color: var(--header-bg-colour);
+    background: var(--header-bg-colour);
     color: var(--title-text-colour);
     line-height: 0.8;
     padding: 1ch;
     border-radius: 1ch;
+    overflow-x: scroll;
 }
 code {
     font-family: var(--code-font);
+    font-size: 1rem;
+    background-color: white;
+    color: red;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1);
+}
+pre code {
     font-size: 0.75em;
     background-color: var(--header-bg-colour);
     color: var(--title-text-colour);
-    padding: 3px;
-}
-pre code {
     padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+blockquote {
+    padding: 0 1em;
+    margin: 0;
+    border-left: 5px solid rgba(0, 0, 0, 0.2);
 }
 /* Links */
 a {
@@ -99,7 +112,6 @@ a {
 a:hover, a:active {
     background-color: var(--link-hover-colour);
 }
-
 footer {
     box-sizing: border-box;
     width: 100%;
@@ -128,7 +140,7 @@ footer a:hover {
 }
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 1em;
     margin: 0;
 }
 article ul {
@@ -138,6 +150,9 @@ article ul {
 article + ul {
     margin: 20px 0 10px 0;
     font-size: 1rem;
+}
+.tags {
+    padding: 1em 0;
 }
 .tag {
     display: inline-block;
